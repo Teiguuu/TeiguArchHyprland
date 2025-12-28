@@ -62,3 +62,20 @@ echo "$NEXT_INDEX" > "$INDEX_FILE"
 notify-send "Wallpaper Changed" "Enjoy your new look!"
 
 cp ~/.cache/wal/colors-hyprlock.conf ~/.config/hypr/colors-hyprlock.conf
+
+# --- УЛЬТИМАТИВНЫЙ ПЛАВНЫЙ БЛОК ---
+
+# 1. Генерируем палитру
+wal -i "$WALLPAPER" -q
+
+# 2. Обновляем Kitty (без перезапуска)
+killall -USR1 kitty 2>/dev/null
+
+# 3. ПЕРЕЗАГРУЖАЕМ СТИЛЬ WAYBAR БЕЗ ЕГО ВЫКЛЮЧЕНИЯ
+# Сигнал SIGUSR2 заставляет Waybar перечитать CSS файл
+pkill -SIGUSR2 waybar
+
+# 4. Обновляем tty-clock
+for term in /dev/pts/[0-9]*; do
+    cat ~/.cache/wal/sequences > "$term" 2>/dev/null
+done

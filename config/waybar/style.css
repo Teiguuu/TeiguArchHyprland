@@ -28,7 +28,7 @@ window#waybar {
     border: 2px solid @color1;
     border-radius: 20px;
     
-    /* Тот самый отступ: 4px сверху/снизу и 15px по бокам */
+
     padding: 4px 15px;
     margin: 5px;
 }

@@ -38,10 +38,11 @@
 На данный момент поддерживается только ручная установка. Скрипт автоматизации в разработке.
 
 1. Клонируйте репозиторий:
-   git clone https://github.com/Teiguuu/TeiguArchHyprland.git
-   cd TeiguArchHyprland
-
-2. Создайте симлинки (рекомендуется GNU Stow):
+   git clone https://github.com/Teiguuu/dotfiles.git
+   
+   cd dotfiles
+   
+3. Создайте симлинки (рекомендуется GNU Stow):
    stow hypr
    (Или скопируйте вручную: cp -r ./hypr ~/.config/)
 

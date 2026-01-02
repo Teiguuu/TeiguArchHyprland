@@ -71,8 +71,7 @@
     "custom/battery_limit": {
         "format": "{}",
         "return-type": "json",
-        "on-click": "/home/teigu/.config/hypr/scripts/battery_limit.sh 80",
-        "on-click-right": "/home/teigu/.config/hypr/scripts/battery_limit.sh 100",
+        "on-click": "/home/teigu/.config/hypr/scripts/battery_limit.sh", 
         "exec": "/home/teigu/.config/hypr/scripts/bat_status.sh",
         "interval": 10,
         "signal": 8
